@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+
 namespace TCPserver
 {
     /// <summary>
@@ -7,15 +9,17 @@ namespace TCPserver
     public class Joke
     {
 
-        private string[] suchary = new string[5];
+        ArrayList suchary = new ArrayList();
         
         public Joke()
         {
-            suchary[0] = "\nGdzie podpisano traktat wersalski? \n - Na samym dole, pod tekstem.";
-            suchary[1] = "\n- Co sie po jednej stronie glaszcze a po drugiej lize?? \n- Nie wiem. \n-... znaczek pocztowy!!";
-            suchary[2] = "\nCo sie stanie jak walec drogowy przejedzie czlowieka? \n- Konwersja obrazu z 3D na 2D";
-            suchary[3] = "\nJak sie nazywa mnich odpowiedzialny za podatki? \n- Brat PIT.";
-            suchary[4] = "\n-Jaka jest ulubiona zabawa dzieci grabarza?  \n- W chowanego.";
+            suchary.Add("\nGdzie podpisano traktat wersalski? \n- Na samym dole, pod tekstem.");
+            suchary.Add("\nCo sie po jednej stronie glaszcze a po drugiej lize?? \n- Nie wiem. \n-... znaczek pocztowy!!");
+            suchary.Add("\nCo sie stanie jak walec drogowy przejedzie czlowieka? \n- Konwersja obrazu z 3D na 2D");
+            suchary.Add("\nJak sie nazywa mnich odpowiedzialny za podatki? \n- Brat PIT.");
+            suchary.Add("\nJaka jest ulubiona zabawa dzieci grabarza?  \n- W chowanego.");
+            suchary.Add("\nCo robi elektryk na scenie? \n- Buduje napiecie.");
+            suchary.Add("\nJaki jest ulubiony owoc zolnierza? \n- Granat.");
         }
 
 
@@ -26,8 +30,8 @@ namespace TCPserver
         public string genJoke()
         {
             Random rnd = new Random();
-            int indeks = rnd.Next(0, suchary.Length);
-            string suchar = suchary[indeks];
+            int indeks = rnd.Next(0, suchary.Count);
+            string suchar = (string)suchary[indeks];
 
             return suchar;
         }
