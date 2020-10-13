@@ -8,9 +8,15 @@ namespace TCPserver
     /// </summary>
     public class Joke
     {
-
+        /// <summary>
+        /// Suchary przechowywane w ArrayList
+        /// </summary>
         ArrayList suchary = new ArrayList();
-        
+
+
+        /// <summary>
+        /// Konstruktor domyślny umieszcza suchary w ArrayList
+        /// </summary>
         public Joke()
         {
             suchary.Add("\nGdzie podpisano traktat wersalski? \n- Na samym dole, pod tekstem.");

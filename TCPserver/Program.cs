@@ -26,7 +26,7 @@ namespace TCPserver
                 client.GetStream().Read(buffer);
                 string text = Encoding.UTF8.GetString(buffer).Replace("\n", "").Replace("\0", "");
                 Console.Write(text);
-                if (check(text) == true)
+                if (check(text))
                 {
                     Console.Write("Potwierdzam\n");
                     String sucharek = suchy.genJoke();
@@ -38,6 +38,7 @@ namespace TCPserver
                     Console.Write("Odrzucam\n");
                     client.GetStream().Write(bytes, 0, bytes.Length);
                 }
+                client.Close();
             }
         }
 
