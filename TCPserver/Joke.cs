@@ -15,7 +15,7 @@ namespace TCPserver
 
 
         /// <summary>
-        /// Konstruktor domyślny umieszcza suchary w ArrayList
+        /// Konstruktor domyślny umieszcza suchary w <see cref="ArrayList"/>
         /// </summary>
         public Joke()
         {
