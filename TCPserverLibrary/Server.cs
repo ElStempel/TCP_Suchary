@@ -3,6 +3,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
+//TODO asynchroniczne i bonus funkcjonalności
+
+
 
 namespace TCPserverLibrary
 {
